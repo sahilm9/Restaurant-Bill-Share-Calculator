@@ -114,11 +114,16 @@ class CalculateRestaurantBill{
     // check to see if billAmount or serviceQuality or selctState are not selected or given
     if(billAmount === "" || serviceQuality === '0' || selectedState === '0') {
       // end alert user to enter values and end function
-      return window.alert("Please enter/select the required fields to calculate the share");
+      window.alert("Please enter/select the required fields to calculate the share");
+      window.location.reload();
+    }
+    // check to see if num is valid number
+    if(isNaN(billAmount)){
+      return window.alert('Bill must be numericals');
     }
     // check to see numPeople is empty or less than or equal to one
-    if(numPeople === "" || numPeople <= 1) {
-    numPeople = 1;
+    if(numPeople === "" || numPeople <= 1){
+      numPeople = 1;
     }
     // calculate total
     let total = ((billAmount*selectedState)*serviceQuality)/numPeople;
