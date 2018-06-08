@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Restaurant, bill, calculator, tip calculator, bill calculator, sales tax">
+  <meta name="description" content="Need to calculate a bill with sales tax and tip? Check this out!">
+  <title>Restaurant</title>
+  <!-- build:css src/styles/styles.css -->
+  <link rel="stylesheet" href="dist/styles/styles.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <div id="container">
+    <h1>Restaurant Bill Share calculator</h1>
+    <div id="calculator">
+      <form>
+        <label for="billAmount">
+          How much is your bill?<br>
+          <input type="num" id="billAmount">
+        </label>
+        <label for="selectState">
+          Which state are you in<br>
+          <select id="selectState">
+            <option selected value="0">-- Choose an option --</option>
+          </select>
+        </label>
+        <label for="serviceQuality">
+          How was your service?<br>
+          <select id="serviceQuality">
+            <option selected value="0">-- Choose an option --</option>
+            </select>
+        </label>
+        <label for="totalPeople">
+            How many people are sharing the bill?<br>
+            <input type="text" id="totalPeople"> people
+        </label>
+        <button type="button" id="calculate">Calculate!</button>
+      </form>
+    </div>
+    <div id="personShare">
+      <sup>$</sup><span id="share">0.00</span>
+      <!-- <small id="each">each</small> -->
+    </div>
+  </div>
+  <!-- build:js src/scripts/app.js -->
+  <script src='dist/scripts/app.js'></script>
+  <!-- endbuild -->
+</body>
+</html>
