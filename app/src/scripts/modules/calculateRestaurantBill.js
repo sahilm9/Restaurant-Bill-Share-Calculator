@@ -111,17 +111,15 @@ class CalculateRestaurantBill{
     let serviceQuality = document.getElementById('serviceQuality').value;
     let numPeople = document.getElementById('totalPeople').value;
     let selectedState = document.getElementById('selectState').value;
+    // check to see if billAmount is valid number
+    if(isNaN(billAmount)){
+      return window.alert('Bill must be in numericals');
+    }
     // check to see if billAmount or serviceQuality or selctState are not selected or given
     if(billAmount === "" || serviceQuality === '0' || selectedState === '0') {
-      // check to see if billAmount is valid number
-      if(isNaN(billAmount)){
-        return window.alert('Bill must be in numericals');
-      }
       // alert user and reload the page
-      else{
         window.alert("Please enter/select the required fields to calculate the share");
         document.location.reload();
-      }
     }
     // check to see numPeople is empty or less than or equal to one
     if(numPeople === "" || numPeople <= 1){
