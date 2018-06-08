@@ -221,7 +221,7 @@ var CalculateRestaurantBill = function () {
       var numPeople = document.getElementById('totalPeople').value;
       var selectedState = document.getElementById('selectState').value;
       // check to see if billAmount or serviceQuality or selctState are not selected or given
-      if (billAmount === "" || serviceQuality === '0' || selectState === '0') {
+      if (billAmount === "" || serviceQuality === '0' || selectedState === '0') {
         // end alert user to enter values and end function
         return window.alert("Please enter/select the required fields to calculate the share");
       }
