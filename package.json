@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "Restaurant bill calculator",
   "version": "1.0.0",
-  "description": "Restaurant bill calculator",
+  "description": "Calculates bill with sales tax and tip and show's each person's share",
   "main": "index.js",
   "repository": "https://github.com/sahilm9/Restaurant-Bill-Calculator.git",
   "author": "Sahil Mokkapati",
